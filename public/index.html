@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css//main.css" />
+    <!-- <script src="./js/bootstrap.js"></script> -->
+    <!-- <script defer src="./js/main.js"></script> -->
+    <script src="./js/jquery3.3.1.js"></script>
+
+    <title>Generate Invoice</title>
+  </head>
+  <body>
+    <header>
+      <h1>Generate Invoice</h1>
+    </header>
+    <form
+      id="invoice"
+      action="/upload"
+      enctype="multipart/form-data"
+      method="POST"
+    >
+      <table align="center" name="my-node">
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>
+              <input id="uname" name="uname" class="form-control" type="text" />
+            </td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>
+              <input
+                id="address"
+                name="address"
+                class="form-control"
+                type="text"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Recieved Amount</td>
+            <td>
+              <input
+                id="amount"
+                name="amount"
+                class="form-control"
+                type="text"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Receipt Number</td>
+            <td>
+              <input
+                id="invoice_id"
+                name="invoice_id"
+                class="form-control"
+                type="text"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Upload Image</td>
+            <td>
+              <input class="form-control" type="file" name="image" id="image" />
+            </td>
+          </tr>
+          <tr>
+            <td>Document type :</td>
+            <td>
+              <input type="radio" name="filetype" value="pdf" checked />Pdf
+              <input type="radio" name="filetype" value="png" />Image
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <button type="submit" id="sub" class="btn btn-primary">
+                Generate Receipt Image
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>
